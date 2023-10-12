@@ -12,6 +12,7 @@ gem "sprockets-rails"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 gem "sass-rails", ">= 6"
+gem "kaminari"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -42,6 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+gem "slim-rails"
 gem "dotenv-rails"
 gem "html2slim", "~> 0.2.0"
 gem "bootstrap", "~> 5.3.0.alpha3"
