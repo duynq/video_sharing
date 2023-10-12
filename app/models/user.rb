@@ -2,6 +2,8 @@ require 'bcrypt'
 class User < ApplicationRecord
   include BCrypt
 
+  has_many :movies, dependent: :destroy
+
   validates :email, email: true, presence: true
   validates :encrypted_password, presence: true
 

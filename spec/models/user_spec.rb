@@ -1,11 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
   describe 'validation' do
     context 'presence' do
       it { should validate_presence_of :email }
       it { should validate_presence_of :encrypted_password }
+    end
+
+    context 'association' do
+      it { should have_many(:movies).dependent(:destroy) }
     end
 
     context 'format email' do
