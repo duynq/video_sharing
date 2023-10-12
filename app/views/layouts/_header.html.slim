@@ -13,5 +13,5 @@
         | Welcome
       span
         = current_user.email
-      = link_to 'Share more video', '#', class: 'button share-video'
+      = link_to 'Share more video', share_path, class: 'button share-video'
       = link_to 'Log out', logout_path, data: { "turbo-method": :delete }, class: 'button log-out'
