@@ -11,6 +11,16 @@ module VideoSharing
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+      g.view_specs false
+      g.helper_specs true
+      g.stylesheets = false
+      g.javascripts = false
+      g.helper = false
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
