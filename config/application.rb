@@ -21,6 +21,12 @@ module VideoSharing
       g.helper = false
     end
 
+    config.autoload_paths += %W[#{config.root}/lib]
+    config.middleware.insert_after ActionDispatch::Flash, Warden::Manager do |manager|
+      manager.default_strategies :password_strategy
+      manager.failure_app = UnauthorizedController
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

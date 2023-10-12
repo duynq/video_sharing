@@ -45,6 +45,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "slim-rails"
 gem "dotenv-rails"
+gem "warden"
 gem "html2slim", "~> 0.2.0"
 gem "bootstrap", "~> 5.3.0.alpha3"
 gem "font-awesome-sass", "~> 4.6", ">= 4.6.2"
