@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
     @movie.user = current_user
     if @movie.save
       flash[:success] = 'Share movie successfully'
+      NotifyNewMovieJob.perform_later(current_user, @movie)
       redirect_to :root
     else
       flash[:danger] = 'Your movie is invalid'
