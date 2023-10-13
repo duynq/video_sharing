@@ -1,8 +1,4 @@
 # README
-* Deployment instructions
-
-* ...
-# funny_app
 ```
 copy .env.example to .env
 ```
